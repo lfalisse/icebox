@@ -11,7 +11,7 @@
 <body>
 <div id='header'>
 	<div id='titles'>
-		<span id='selected'><a href='index.html'>Anemone</a></span><span>|</span>
+		<span><a href='index.html'>Anemone</a></span><span>|</span>
 		<span><a href='airy.html'>Airy</a></span><span>|</span>
 		<span><a href='lakeside.html'>Lakeside</a></span><span>|</span>
 		<span><a href='flesh.html'>Flesh</a></span><span>|</span>
@@ -21,31 +21,33 @@
 		<span><a href='monastery.html'>Monastery</a></span><span>|</span>
 		<span><a href='net.html'>Net</a></span><span>|</span>
 		<span><a href='terrarium.html'>Terrarium</a></span><span>|</span>
-		<span><a href='valley.html'>Valley</a></span><span>|</span>
+		<span id='selected'><a href='valley.html'>Valley</a></span><span>|</span>
 		<span><a href='monarch.html'>Monarch</a></span>
 	</div>
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Anemone</span><br>Named after its marine visual counterparts, this collection of images resembles a macro look into aquatic wildlife. Combining a large scale of red, yellow, blue, and violet hues, the viewer is met with an organic object, seemingly alive, growing and taking the space of the frame. Although beautiful, 'Anemone' relates to its predatory look-alikes as the deep reds and visual depth reflect the collections' menacing visuals.
+		<span id='selected1'>Valley</span><br>Heavily drawing from its 'Valley' gene, this collection is the most realistic. These landscapes often situate the viewer 
+at the base of the mountain range, allowing the audience to virtually experience the grandeur of the valley. These images 
+clearly make use of layering, depth, and changes in perspective.
 	</h1>
 </div>
 <div class="slideshow">
-		<img id='slide' src='img/base_anemone.jpeg'>
+		<img id='slide' src='img/base_valley.jpeg'>
 	</div>
 </body>
 <script type="text/javascript">
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
-slideimages[0].src = "img/base_anemone.jpeg" // set image src property to image path, preloading image in the process
+slideimages[0].src = "img/base_valley.jpeg" // set image src property to image path, preloading image in the process
 slideimages[1] = new Image()
-slideimages[1].src = "img/anemone2.jpeg"
+slideimages[1].src = "img/valley2.jpeg"
 slideimages[2] = new Image()
-slideimages[2].src = "img/anemone3.jpeg"
+slideimages[2].src = "img/valley3.jpeg"
 slideimages[4] = new Image()
-slideimages[4].src = "img/anemone4.jpeg"
+slideimages[4].src = "img/valley4.jpeg"
 slideimages[5] = new Image()
-slideimages[5].src = "img/anemone5.jpeg"
+slideimages[5].src = "img/valley5.jpeg"
 
 //variable that will increment through the images
 var step=0
