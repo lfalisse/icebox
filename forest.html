@@ -30,7 +30,7 @@ body{
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Forest</span><br>Drawing from an emphasis on the combination of the 'Monarch', 'Rapeseed' and 'Dingo' genes, this collection is incredibly organic. The subject is either easily distinguishable from the background or integrated with it, creating a 'landscape' image. The subjects are bulbous blobs of orange and yellow, which personally, resemble or reflect the idea of parasites in nature.
+		<span id='selected1'>Forest</span><br>Drawing from an emphasis on the combination of the 'Monarch', 'Rapeseed' and 'Dingo' genes, this collection is incredibly organic. The subject is either easily distinguishable from the background or integrated with it, creating a 'landscape' image. The subjects are bulbous blobs of orange and yellow, which personally, resemble or reflect the idea of parasites in nature.<a id='arrow'>→</a>
 	</h1>
 </div>
 <div class="slideshow">
@@ -38,6 +38,17 @@ body{
 	</div>
 </body>
 <script type="text/javascript">
+$("#arrow").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.slideshow').css('visibility', 'hidden');
+   
+  } else {
+     $('.slideshow').css('visibility', 'visible');
+  }     
+    $(this).data("clicks", !clicks);
+});
+
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
 slideimages[0].src = "img/base_forest.jpeg" // set image src property to image path, preloading image in the process

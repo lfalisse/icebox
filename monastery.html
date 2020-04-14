@@ -30,7 +30,7 @@ body{
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Monastery</span><br>'Monastery' is an incredibly diverse collection, drawing from powerful yellows and geometrical shapes. While three of the five images can be seen as architectural buildings overlooking an often simple landscape, the two that remain or entirely abstract with very little to decipher.
+		<span id='selected1'>Monastery</span><br>'Monastery' is an incredibly diverse collection, drawing from powerful yellows and geometrical shapes. While three of the five images can be seen as architectural buildings overlooking an often simple landscape, the two that remain or entirely abstract with very little to decipher.<a id='arrow'>→</a>
 	</h1>
 </div>
 <div class="slideshow">
@@ -38,6 +38,17 @@ body{
 	</div>
 </body>
 <script type="text/javascript">
+$("#arrow").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.slideshow').css('visibility', 'hidden');
+   
+  } else {
+     $('.slideshow').css('visibility', 'visible');
+  }     
+    $(this).data("clicks", !clicks);
+});
+
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
 slideimages[0].src = "img/base_monastery.jpeg" // set image src property to image path, preloading image in the process

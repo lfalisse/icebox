@@ -30,7 +30,7 @@ body{
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Valley</span><br>Heavily drawing from its 'Valley' gene, this collection is the most realistic. These landscapes often situate the viewer at the base of the mountain range, allowing the audience to virtually experience the grandeur of the valley. These images clearly make use of layering, depth, and changes in perspective.
+		<span id='selected1'>Valley</span><br>Heavily drawing from its 'Valley' gene, this collection is the most realistic. These landscapes often situate the viewer at the base of the mountain range, allowing the audience to virtually experience the grandeur of the valley. These images clearly make use of layering, depth, and changes in perspective.<a id='arrow'>→</a>
 	</h1>
 </div>
 <div class="slideshow">
@@ -38,6 +38,17 @@ body{
 	</div>
 </body>
 <script type="text/javascript">
+$("#arrow").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.slideshow').css('visibility', 'hidden');
+   
+  } else {
+     $('.slideshow').css('visibility', 'visible');
+  }     
+    $(this).data("clicks", !clicks);
+});
+
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
 slideimages[0].src = "img/base_valley.jpeg" // set image src property to image path, preloading image in the process

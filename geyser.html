@@ -30,7 +30,7 @@ body{
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Geyser</span><br>The 'Geyser' collection is titled after its most prominent gene, sending what resembles water and gas shooting up into the air. The 'ground' around the geyser's is often water textured, reflecting a body of water of sorts. In two of the five images, human-like subjects fill the water, resembling a fountain. Although the geyser gene remained the same, the levels to which they are present in the image varies, creating a variety of interwinding bursts of 'water'.
+		<span id='selected1'>Geyser</span><br>The 'Geyser' collection is titled after its most prominent gene, sending what resembles water and gas shooting up into the air. The 'ground' around the geyser's is often water textured, reflecting a body of water of sorts. In two of the five images, human-like subjects fill the water, resembling a fountain. Although the geyser gene remained the same, the levels to which they are present in the image varies, creating a variety of interwinding bursts of 'water'.<a id='arrow'>→</a>
 	</h1>
 </div>
 <div class="slideshow">
@@ -38,6 +38,17 @@ body{
 	</div>
 </body>
 <script type="text/javascript">
+$("#arrow").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.slideshow').css('visibility', 'hidden');
+   
+  } else {
+     $('.slideshow').css('visibility', 'visible');
+  }     
+    $(this).data("clicks", !clicks);
+});
+
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
 slideimages[0].src = "img/base_geyser.jpeg" // set image src property to image path, preloading image in the process

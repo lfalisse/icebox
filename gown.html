@@ -30,7 +30,7 @@ body{
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Gown</span><br>The strong, bright red's allude to a passionate and ferocious subject. The subject often resembles a human like figure in a red, velvet textured gown. The layering of the 'gown' combined with the contrast of the green bug-like background resembles that of a butterfly in a macro lens.
+		<span id='selected1'>Gown</span><br>The strong, bright red's allude to a passionate and ferocious subject. The subject often resembles a human like figure in a red, velvet textured gown. The layering of the 'gown' combined with the contrast of the green bug-like background resembles that of a butterfly in a macro lens.<a id='arrow'>→</a>
 	</h1>
 </div>
 <div class="slideshow">
@@ -38,6 +38,17 @@ body{
 	</div>
 </body>
 <script type="text/javascript">
+$("#arrow").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.slideshow').css('visibility', 'hidden');
+   
+  } else {
+     $('.slideshow').css('visibility', 'visible');
+  }     
+    $(this).data("clicks", !clicks);
+});
+
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
 slideimages[0].src = "img/base_gown.jpeg" // set image src property to image path, preloading image in the process

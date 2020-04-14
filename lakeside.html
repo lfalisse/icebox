@@ -30,7 +30,7 @@ body{
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Lakeside</span><br>Lakeside (or bridge) is a collection of unimaginable architectural behemoths, usually situated along a body of water. These architectural structures are visually made up of large, seemingly concrete, load bearing beams and subsequently draped with a tinted net of sorts. These images propose fantasy structures; unimaginable and unobtainable.
+		<span id='selected1'>Lakeside</span><br>Lakeside (or bridge) is a collection of unimaginable architectural behemoths, usually situated along a body of water. These architectural structures are visually made up of large, seemingly concrete, load bearing beams and subsequently draped with a tinted net of sorts. These images propose fantasy structures; unimaginable and unobtainable.<a id='arrow'>→</a>
 	</h1>
 </div>
 <div class="slideshow">
@@ -38,6 +38,17 @@ body{
 	</div>
 </body>
 <script type="text/javascript">
+$("#arrow").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.slideshow').css('visibility', 'hidden');
+   
+  } else {
+     $('.slideshow').css('visibility', 'visible');
+  }     
+    $(this).data("clicks", !clicks);
+});
+	
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
 slideimages[0].src = "img/base_bridge.jpeg" // set image src property to image path, preloading image in the process

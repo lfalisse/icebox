@@ -30,7 +30,7 @@ body{
 </div>
 <div id='description'>
 	<h1 id='bio'>
-		<span id='selected1'>Net</span><br>A soothing, fantasy painting like collection, 'Net's subjects and background are easily distinguishable. While the background varies through the collection, the idea remains; an incredibly organic landscape shifting from forests to beaches and valleys. The subjects have a wing-like texture (originating from the 'Monarch' gene) and are composed of a brighter, less organic color palette. The wing, or net, is often bulbous, alluding to the idea that it is simply the outer layer of the subject, leaving what's inside to the audience's imagination.
+		<span id='selected1'>Net</span><br>A soothing, fantasy painting like collection, 'Net's subjects and background are easily distinguishable. While the background varies through the collection, the idea remains; an incredibly organic landscape shifting from forests to beaches and valleys. The subjects have a wing-like texture (originating from the 'Monarch' gene) and are composed of a brighter, less organic color palette. The wing, or net, is often bulbous, alluding to the idea that it is simply the outer layer of the subject, leaving what's inside to the audience's imagination.<a id='arrow'>→</a>
 	</h1>
 </div>
 <div class="slideshow">
@@ -38,6 +38,17 @@ body{
 	</div>
 </body>
 <script type="text/javascript">
+$("#arrow").click(function() {
+  var clicks = $(this).data('clicks');
+  if (clicks) {
+     $('.slideshow').css('visibility', 'hidden');
+   
+  } else {
+     $('.slideshow').css('visibility', 'visible');
+  }     
+    $(this).data("clicks", !clicks);
+});
+
 var slideimages = new Array() // create new array to preload images
 slideimages[0] = new Image() // create new instance of image object
 slideimages[0].src = "img/base_net.jpeg" // set image src property to image path, preloading image in the process
